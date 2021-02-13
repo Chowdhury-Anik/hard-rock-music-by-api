@@ -37,7 +37,7 @@ const getLyrics = async (artist, title) => {
    displayLyrics(data.lyrics);
 }
 const displayLyrics = lyrics => {
-    const lyricsDiv = document.getElementById(songLyrics);
+    const lyricsDiv = document.getElementById("songLyrics");
     lyricsDiv.innerText = lyrics;
 
 }
