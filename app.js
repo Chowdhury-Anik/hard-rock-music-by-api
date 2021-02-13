@@ -33,11 +33,12 @@ const getLyrics = async (artist, title) => {
    const url = `https://api.lyrics.ovh/v1/${artist}/${title}`;
    
    const res= await fetch(url);
-   const data = res.json();
+   const data = await res.json();
    displayLyrics(data.lyrics);
 }
 const displayLyrics = lyrics => {
     const lyricsDiv = document.getElementById("songLyrics");
     lyricsDiv.innerText = lyrics;
+    console.log(lyrics);
 
 }
